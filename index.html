@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahseen Rahman</title>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.4.6/dist/js/uikit-icons.min.js"></script>
+</head>
+
+<body onload="typeWriter()">
+    <div class="uk-container">
+        <h3 class="uk-margin-top"
+            style="font-size: 70px; margin-top: 100px; margin-left: 80px; font-family: 'Courier New', Courier, monospace;">
+            Hi, I am
+        </h3>
+        <h1 style="font-size: 100px; margin-top: 10px; margin-left: 80px; font-family: 'Courier New', Courier, monospace;"
+            id="name-large" uk-scrollspy="cls:uk-animation-fade"></h1>&nbsp;
+        <ul class="uk-list" style="font-size: 20px; margin-left: 80px;"
+            uk-scrollspy="cls:uk-animation-slide-right; repeat: true">
+            <li>You don't know me yet? Someone is living under a rock.</li>
+            <li>The boring stuff to know about me is I am a Computer Science & Engineering Undergraduate at <br>
+                Indira
+                Gandhi
+                Institute of Technology, Odisha.</li>
+            <li>Likes to go through books and pretends to understand them.</li>
+            <li>You know how we always want to go on a roadtrip in a car with some indie music on a long wide open
+                road?
+                <br>Well, I am driving and it is non-negotiable.</li>
+            <li>
+                The interesting stuff about me is...<br>
+                Well who am I kidding? Let's move on!
+            </li>
+        </ul>
+        <hr class="uk-divider-icon">
+    </div>
+    <div class="uk-container" uk-scrollspy="cls:uk-animation-slide-right; repeat: true">
+        <button class="uk-button uk-button-default uk-button-default uk-button-large  uk-margin-small-right"
+            style="margin-left: 80px; margin-top: 40px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+            type="button" uk-toggle="target: #exp">Experience</button>
+        <button class="uk-button uk-button-default uk-button-default uk-button-large  uk-margin-small-right"
+            style="margin-left: 80px; margin-top: 40px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+            type="button" uk-toggle="target: #proj">Projects</button>
+    </div>
+    <div id="exp" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h2>Saarthi.ai</h2>
+            <h4>Backend Developer Intern</h4>
+
+        </div>
+    </div>
+    <div id="proj" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <h2>URL shortener</h2>
+            <h4>It takes a long URL and returns a shorter URL.</h4>
+        </div>
+    </div>
+
+    <script>
+        var i = 0;
+        var txt = 'Tahseen Rahman';
+        var speed = 150;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("name-large").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+</body>
+
+</html>
